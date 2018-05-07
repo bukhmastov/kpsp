@@ -42,7 +42,6 @@ QString Static::getXOR(QString p1, QString p2) {
     return p12;
 }
 
-
 QString Static::getReadablePolynom(QString poly) {
     QString readable = "";
     int size = poly.size();
@@ -63,4 +62,56 @@ QString Static::getReadablePolynom(QString poly) {
         }
     }
     return readable;
+}
+
+std::vector<int> Static::getPAKF(QString f, int n) {
+    std::vector<int> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(0);
+    }
+    for (int i = 0; i < n; i++) {
+        QString fShift = "";
+        for (int j = i; j < n + i; j++) {
+            fShift.append(f.at(j % n));
+        }
+        int q = 0;
+        for (int j = 0; j < n; j++) {
+            if (f.at(j) == fShift.at(j)) {
+                q++;
+            }
+        }
+        rm[i] = 2 * q - n;
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}
+
+std::vector<int> Static::getAAKF(QString f, int n) {
+    std::vector<int> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(0);
+    }
+    for (int i = 0; i < n + 1; i++) {
+        QString fShift = "";
+        for (int j = 0; j < i; j++) {
+            fShift.append("-");
+        }
+        for (int j = i; j < n; j++) {
+            fShift.append(f.at(j));
+        }
+        int q = 0;
+        int g = 0;
+        for (int j = 0; j < n - 1; j++) {
+            if (i + j > n - 2) {
+                break;
+            }
+            if (f.at(j) == fShift.at(i + j)) {
+                q++;
+            } else {
+                g++;
+            }
+        }
+        rm[i] = q - g;
+    }
+    return rm;
 }

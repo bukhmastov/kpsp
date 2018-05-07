@@ -37,7 +37,10 @@ SOURCES += \
     screen/screenabout.cpp \
     screen/screendescription.cpp \
     screen/screenquestion.cpp \
-    screen/screensummary.cpp
+    screen/screensummary.cpp \
+    task/screentask1.cpp \
+    view/chartview.cpp \
+    task/screentask2.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -53,7 +56,10 @@ HEADERS += \
     screen/screenabout.h \
     screen/screendescription.h \
     screen/screenquestion.h \
-    screen/screensummary.h
+    screen/screensummary.h \
+    task/screentask1.h \
+    view/chartview.h \
+    task/screentask2.h
 
 FORMS += \
         mainwindow.ui \
@@ -61,7 +67,9 @@ FORMS += \
     screen/screenabout.ui \
     screen/screendescription.ui \
     screen/screenquestion.ui \
-    screen/screensummary.ui
+    screen/screensummary.ui \
+    task/screentask1.ui \
+    task/screentask2.ui
 
 RESOURCES += \
     resources.qrc

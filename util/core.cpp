@@ -4,8 +4,10 @@
 #include "screen/screendescription.h"
 #include "screen/screenquestion.h"
 #include "screen/screensummary.h"
+#include "task/screentask1.h"
+#include "task/screentask2.h"
 #include <iostream>
-#include <time.h>
+#include <chrono>
 #include <algorithm>
 
 Core::Core() {}
@@ -15,7 +17,10 @@ void Core::init(WindowController *window) {
 }
 
 void Core::generate() {
-    generate(time(NULL));
+    std::chrono::milliseconds msec = std::chrono::duration_cast<std::chrono::milliseconds>(
+        std::chrono::system_clock::now().time_since_epoch()
+    );
+    generate(msec.count());
 }
 
 void Core::generate(unsigned int seed) {
@@ -94,10 +99,11 @@ void Core::generate(unsigned int seed) {
     // TASK'S VIEWS DEFINES AT Core::getView(int id)
     // ------------------------------
     // intro part
-    tasks.push_back(new Task(0,  0,  "Практическое занятие"));
+    /*tasks.push_back(new Task(0,  0,  "Практическое занятие"));
     tasks.push_back(new Task(1,  0,  "Практическое занятие"));
     tasks.push_back(new Task(2,  0,  "Практическое занятие"));
     // questions part
+    /*
     tasks.push_back(new Task(3,  1,  "Входной контрольный опрос: вопрос 1",  false));
     tasks.push_back(new Task(4,  2,  "Входной контрольный опрос: вопрос 2",  false));
     tasks.push_back(new Task(5,  3,  "Входной контрольный опрос: вопрос 3",  false));
@@ -108,7 +114,10 @@ void Core::generate(unsigned int seed) {
     tasks.push_back(new Task(10, 8,  "Входной контрольный опрос: вопрос 8",  false));
     tasks.push_back(new Task(11, 9,  "Входной контрольный опрос: вопрос 9",  false));
     tasks.push_back(new Task(12, 10, "Входной контрольный опрос: вопрос 10", false));
+    */
     // tasks part
+    tasks.push_back(new Task(13, 1,  "Определение ПАКФ ПСП с периодом N=7"));
+    tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
 
     // summary part
     tasks.push_back(new Task(99, 0, "Результат", false));
@@ -140,6 +149,8 @@ ScreenController* Core::getView(int id) {
         case 11: return ScreenQuestion::get(this, questions.at(questionsOrder.at(8))); break;
         case 12: return ScreenQuestion::get(this, questions.at(questionsOrder.at(9))); break;
         // tasks part
+        case 13: return new ScreenTask1;  break;
+        case 14: return new ScreenTask2;  break;
 
         // summary part
         case 99: return ScreenSummary::get(this); break;
