@@ -16,6 +16,8 @@ public:
     static QString getReadablePolynom(QString);
     static std::vector<int> getPAKF(QString, int);
     static std::vector<int> getAAKF(QString, int);
+    static QString alphabet01to11(QString);
+    static QString alphabet11to01(QString);
 };
 
 #endif // STATIC_H

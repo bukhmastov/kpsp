@@ -70,13 +70,13 @@ std::vector<int> Static::getPAKF(QString f, int n) {
         rm.push_back(0);
     }
     for (int i = 0; i < n; i++) {
-        QString fShift = "";
-        for (int j = i; j < n + i; j++) {
-            fShift.append(f.at(j % n));
+        QString fs = ""; // сдвиг вправо на i знаков с заполнением левых символов
+        for (int j = n - i; j < 2 * n - i; j++) {
+            fs.append(f.at(j % n));
         }
         int q = 0;
         for (int j = 0; j < n; j++) {
-            if (f.at(j) == fShift.at(j)) {
+            if (f.at(j) == fs.at(j)) {
                 q++;
             }
         }
@@ -91,27 +91,43 @@ std::vector<int> Static::getAAKF(QString f, int n) {
     for (int i = 0; i < n + 1; i++) {
         rm.push_back(0);
     }
-    for (int i = 0; i < n + 1; i++) {
-        QString fShift = "";
-        for (int j = 0; j < i; j++) {
-            fShift.append("-");
-        }
-        for (int j = i; j < n; j++) {
-            fShift.append(f.at(j));
+    for (int i = 0; i < n; i++) {
+        QString fs = ""; // сдвиг вправо на i знаков без заполнения передних символов
+        for (int j = n - i; j < 2 * n - i; j++) {
+            fs.append(j >= n ? f.at(j % n) : QChar('-'));
         }
         int q = 0;
         int g = 0;
-        for (int j = 0; j < n - 1; j++) {
-            if (i + j > n - 2) {
-                break;
-            }
-            if (f.at(j) == fShift.at(i + j)) {
-                q++;
-            } else {
-                g++;
+        for (int j = n - i; j < 2 * n - i; j++) {
+            if (j >= n) {
+                if (f.at(j % n + i) == fs.at(j % n + i)) {
+                    q++;
+                } else {
+                    g++;
+                }
             }
         }
         rm[i] = q - g;
     }
     return rm;
+}
+
+QString Static::alphabet01to11(QString text) {
+    if (text == "0") {
+        return "1";
+    }
+    if (text == "1") {
+        return "-1";
+    }
+    return text;
+}
+
+QString Static::alphabet11to01(QString text) {
+    if (text == "1" || text == "+1") {
+        return "0";
+    }
+    if (text == "-1") {
+        return "1";
+    }
+    return text;
 }

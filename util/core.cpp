@@ -6,6 +6,7 @@
 #include "screen/screensummary.h"
 #include "task/screentask1.h"
 #include "task/screentask2.h"
+#include "task/screentask3.h"
 #include <iostream>
 #include <chrono>
 #include <algorithm>
@@ -116,8 +117,9 @@ void Core::generate(unsigned int seed) {
     tasks.push_back(new Task(12, 10, "Входной контрольный опрос: вопрос 10", false));
     */
     // tasks part
-    tasks.push_back(new Task(13, 1,  "Определение ПАКФ ПСП с периодом N=7"));
-    tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
+    //tasks.push_back(new Task(13, 1,  "Определение ПАКФ ПСП с периодом N=7"));
+    //tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
+    tasks.push_back(new Task(15, 3,  "Определение ПАКФ и ААКФ последовательностей Уолша"));
 
     // summary part
     tasks.push_back(new Task(99, 0, "Результат", false));
@@ -151,6 +153,7 @@ ScreenController* Core::getView(int id) {
         // tasks part
         case 13: return new ScreenTask1;  break;
         case 14: return new ScreenTask2;  break;
+        case 15: return new ScreenTask3;  break;
 
         // summary part
         case 99: return ScreenSummary::get(this); break;
