@@ -26,7 +26,7 @@ void ScreenTask3::init() {
      * +1 -> 0
      * -1 -> 1
      */
-    switch (/*rnd() % 6*/ 4) {
+    switch (rnd() % 6) {
     case 0: k = 1; f = "01010101"; break;
     case 1: k = 2; f = "00110011"; break;
     case 2: k = 3; f = "01100110"; break;
@@ -38,6 +38,7 @@ void ScreenTask3::init() {
     rm1 = Static::getPAKF(f, 8);
     rm2 = Static::getAAKF(f, 8);
     ui->title->setText(ui->title->text().replace("%k%", QString::number(k)));
+    ScreenController::store["task3_f"] = f;
     if (readOnly) {
         ui->inputF1->setText(Static::alphabet01to11(f.at(0)));
         ui->inputF2->setText(Static::alphabet01to11(f.at(1)));

@@ -18,6 +18,9 @@ public:
     static std::vector<int> getAAKF(QString, int);
     static QString alphabet01to11(QString);
     static QString alphabet11to01(QString);
+    static QString sequence01to11(QString);
+    static QString getDyadicShift(QString, int);
+    static std::vector<int> getDPAKF(QString, int);
 };
 
 #endif // STATIC_H
