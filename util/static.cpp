@@ -141,13 +141,13 @@ QString Static::sequence01to11(QString text) {
 }
 
 QString Static::getDyadicShift(QString f, int s) {
-    QString fds;
+    QString fds = "";
     if (s == 0) {
         return f;
     }
     for (int i = 0; i < f.size(); i += s * 2) {
-        fds.append(f.mid(s, s));
-        fds.append(f.mid(0, s));
+        fds.append(f.mid(i + s, s));
+        fds.append(f.mid(i, s));
     }
     return fds;
 }
@@ -158,20 +158,20 @@ std::vector<int> Static::getDPAKF(QString f, int n) {
         rm.push_back(0);
     }
     for (int i = 0; i < n; i++) {
-        QString df = f;
-        for (int bit = 0; bit < 10; bit++) {
+        std::vector<int> power;
+        for (int bit = 0; bit < i; bit++) {
             int bin_power = 1 << bit;
             if (bin_power & i) {
-                df = getDyadicShift(df, bin_power);
+                power.push_back(bin_power);
             }
         }
-        QString fs = ""; // сдвиг вправо на i знаков с заполнением левых символов
-        for (int j = n - i; j < 2 * n - i; j++) {
-            fs.append(df.at(j % n));
+        QString ds = f;
+        for (int j = power.size() - 1; j >= 0; j--) {
+            ds = getDyadicShift(ds, power.at(j));
         }
         int q = 0;
         for (int j = 0; j < n; j++) {
-            if (df.at(j) == fs.at(j)) {
+            if (f.at(j) == ds.at(j)) {
                 q++;
             }
         }

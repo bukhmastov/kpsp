@@ -53,15 +53,15 @@ bool ScreenTask4::validate(Core* core, QString* message) {
         return true;
     }
     if (
-            ui->input1->text().toInt() == rm1.at(0) &&
-            ui->input2->text().toInt() == rm1.at(1) &&
-            ui->input3->text().toInt() == rm1.at(2) &&
-            ui->input4->text().toInt() == rm1.at(3) &&
-            ui->input5->text().toInt() == rm1.at(4) &&
-            ui->input6->text().toInt() == rm1.at(5) &&
-            ui->input7->text().toInt() == rm1.at(6) &&
-            ui->input8->text().toInt() == rm1.at(7) &&
-            ui->input9->text().toInt() == rm1.at(8)
+            ui->input1->text().toInt() == rm.at(0) &&
+            ui->input2->text().toInt() == rm.at(1) &&
+            ui->input3->text().toInt() == rm.at(2) &&
+            ui->input4->text().toInt() == rm.at(3) &&
+            ui->input5->text().toInt() == rm.at(4) &&
+            ui->input6->text().toInt() == rm.at(5) &&
+            ui->input7->text().toInt() == rm.at(6) &&
+            ui->input8->text().toInt() == rm.at(7) &&
+            ui->input9->text().toInt() == rm.at(8)
     ) {
         message->append(Static::messageAnswerRight);
         core->changeScore(2);
