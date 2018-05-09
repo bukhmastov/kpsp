@@ -5,8 +5,7 @@ ChartView::ChartView(QWidget *parent) : QGraphicsView(parent) {
     scene = new QGraphicsScene(this);
     grid = new QPen(Qt::lightGray, 1);
     axes = new QPen(Qt::darkGray, 2);
-    graph = new QPen(Qt::darkRed, 2);
-
+    graph = new QPen(Qt::red, 2);
 }
 
 ChartView::~ChartView() {
@@ -18,7 +17,7 @@ ChartView::~ChartView() {
 
 void ChartView::addPoint(int x, int y) {
     // y axe inverted
-    points.push_back(QPointF(x * 10, -y * 10));
+    points.push_back(QPointF(x * scale, -y * scale));
 }
 
 void ChartView::draw() {
@@ -33,31 +32,31 @@ void ChartView::draw() {
     for (unsigned int i = 0; i < points.size(); i++) {
         QPointF point = points.at(i);
         if (point.x() <= minX) {
-            minX = point.x() - 10;
+            minX = point.x() - scale;
         }
         if (point.x() >= maxX) {
-            maxX = point.x() + 10;
+            maxX = point.x() + scale;
         }
         if (point.y() <= minY) {
-            minY = point.y() - 10;
+            minY = point.y() - scale;
         }
         if (point.y() >= maxY) {
-            maxY = point.y() + 10;
+            maxY = point.y() + scale;
         }
     }
-    if (minX > -10) {
+    if (minX > -scale) {
         // set minimum left x bound
-        minX = -10;
+        minX = -scale;
     }
-    if (maxY < 10) {
+    if (maxY < scale) {
         // set minimum bottom y bound
-        maxY = 10;
+        maxY = scale;
     }
     // draw grid
-    for (int i = minX; i < maxX + 10; i += 10) {
+    for (int i = minX; i < maxX + scale; i += scale) {
         scene->addLine(i, minY, i, maxY, i == 0 ? *axes : *grid);
     }
-    for (int i = minY; i < maxY + 10; i += 10) {
+    for (int i = minY; i < maxY + scale; i += scale) {
         scene->addLine(minX, i, maxX, i, i == 0 ? *axes : *grid);
     }
     // draw graph
@@ -67,6 +66,6 @@ void ChartView::draw() {
 
     // draw
     setScene(scene);
-    setFixedHeight(maxY - minY + 5);
-    setFixedWidth(maxX - minX + 5);
+    setFixedHeight(maxY - minY + scale / 2);
+    setFixedWidth(maxX - minX + scale / 2);
 }

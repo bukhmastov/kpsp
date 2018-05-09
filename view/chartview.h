@@ -25,6 +25,7 @@ private:
     QPen *axes;
     QPen *graph;
     std::vector<QPointF> points;
+    int scale = 15;
 };
 
 #endif // CHARTVIEW_H

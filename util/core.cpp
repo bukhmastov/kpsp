@@ -118,9 +118,9 @@ void Core::generate(unsigned int seed) {
     tasks.push_back(new Task(12, 10, "Входной контрольный опрос: вопрос 10", false));
     */
     // tasks part
-    //tasks.push_back(new Task(13, 1,  "Определение ПАКФ ПСП с периодом N=7"));
-    //tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
-    //tasks.push_back(new Task(15, 3,  "Определение ПАКФ и ААКФ последовательностей Уолша"));
+    tasks.push_back(new Task(13, 1,  "Определение ПАКФ ПСП с периодом N=7"));
+    tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
+    tasks.push_back(new Task(15, 3,  "Определение ПАКФ и ААКФ последовательностей Уолша"));
     tasks.push_back(new Task(16, 4,  "Определение ПАКФ последовательностей Уолша при диадном сдвиге"));
 
     // summary part
