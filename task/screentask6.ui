@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ScreenTask5</class>
- <widget class="QFrame" name="ScreenTask5">
+ <class>ScreenTask6</class>
+ <widget class="QFrame" name="ScreenTask6">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>872</width>
-    <height>551</height>
+    <width>853</width>
+    <height>572</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,7 +47,7 @@
         <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
-        <string>Определить ненормированную ПАКФ при циклическом сдвиге для троичной М-последовательности с периодом N = 8 в пространстве Ли с алфавитом {a0=0, a1=1, a2=2} и в пространстве Эвклида с алфавитом {a0=1, a1=exp(j*2pi/3), a2=exp(j*4pi/3)} для сдвигов m={%m1%, %m2%, %m3%}. Результаты вычислений занести в отчёт.&lt;br&gt;h(x)=%h%&lt;br&gt;Начальное состояние регистра: c0=%c0%, c1=%c1%</string>
+        <string>Определить ненормированную ПАКФ при диадном сдвиге в пространствах Ли (алфавит {a0=0, a1=1, a2=2}) и Эвклида (алфавит {a0=1, a1=exp(j*2pi/3), a2=exp(j*4pi/3)}) для троичной М-последовательности из предыдущего пункта (%mSeq%) для сдвигов m={%m1%, %m2%, %m3%}. Результаты вычислений занести в отчёт.</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -869,17 +869,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>inputLIm1</tabstop>
-  <tabstop>inputLIm2</tabstop>
-  <tabstop>inputLIm3</tabstop>
-  <tabstop>inputEVm1Re</tabstop>
-  <tabstop>inputEVm1Im</tabstop>
-  <tabstop>inputEVm2Re</tabstop>
-  <tabstop>inputEVm2Im</tabstop>
-  <tabstop>inputEVm3Re</tabstop>
-  <tabstop>inputEVm3Im</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>

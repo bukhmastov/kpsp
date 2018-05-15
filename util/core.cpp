@@ -9,6 +9,7 @@
 #include "task/screentask3.h"
 #include "task/screentask4.h"
 #include "task/screentask5.h"
+#include "task/screentask6.h"
 #include <iostream>
 #include <chrono>
 #include <algorithm>
@@ -123,7 +124,8 @@ void Core::generate(unsigned int seed) {
     //tasks.push_back(new Task(14, 2,  "Определение ААКФ ПСП с периодом N=7"));
     //tasks.push_back(new Task(15, 3,  "Определение ПАКФ и ААКФ последовательностей Уолша"));
     //tasks.push_back(new Task(16, 4,  "Определение ПАКФ последовательностей Уолша при диадном сдвиге"));
-    tasks.push_back(new Task(17, 5,  "Определение ПАКФ троичной М-последовательности"));
+    //tasks.push_back(new Task(17, 5,  "Определение ПАКФ троичной М-последовательности"));
+    tasks.push_back(new Task(18, 6,  "Определение ПАКФ троичной М-последовательности при диадном сдвиге"));
 
     // summary part
     tasks.push_back(new Task(99, 0, "Результат", false));
@@ -160,6 +162,7 @@ ScreenController* Core::getView(int id) {
         case 15: return new ScreenTask3;  break;
         case 16: return new ScreenTask4;  break;
         case 17: return new ScreenTask5;  break;
+        case 18: return new ScreenTask6;  break;
 
         // summary part
         case 99: return ScreenSummary::get(this); break;

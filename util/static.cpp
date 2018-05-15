@@ -253,3 +253,68 @@ std::pair<double, double> Static::two2euclide(int i) {
     case 2: return std::make_pair(-0.5, - sqrt(3) / 2.0);
     }
 }
+
+std::vector<double> Static::getDLIPAKF(QString f, int p, int n) {
+    std::vector<double> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(0);
+    }
+    for (int i = 0; i < n; i++) {
+        std::vector<int> power;
+        for (int bit = 0; bit < i; bit++) {
+            int bin_power = 1 << bit;
+            if (bin_power & i) {
+                power.push_back(bin_power);
+            }
+        }
+        QString ds = f;
+        for (int j = power.size() - 1; j >= 0; j--) {
+            ds = getDyadicShift(ds, power.at(j));
+        }
+        int d = 0;
+        for (int j = 0; j < n; j++) {
+            if (f.at(j) != ds.at(j)) {
+                d++;
+            }
+        }
+        rm[i] = ((double) ((int) std::round(((double) n - (double) ((4.0 / (double) p) * (double) d)) * 1000))) / 1000;
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}
+
+std::vector<std::pair<double, double>> Static::getDEVPAKF(QString f, int n) {
+    std::vector<std::pair<double, double>> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(std::make_pair(0.0, 0.0));
+    }
+    for (int i = 0; i < n; i++) {
+        std::vector<int> power;
+        for (int bit = 0; bit < i; bit++) {
+            int bin_power = 1 << bit;
+            if (bin_power & i) {
+                power.push_back(bin_power);
+            }
+        }
+        QString ds = f;
+        for (int j = power.size() - 1; j >= 0; j--) {
+            ds = getDyadicShift(ds, power.at(j));
+        }
+        for (int j = 0; j < n; j++) {
+            int i1 = QString(ds.at(j)).toInt();
+            int i2 = QString(f.at(j)).toInt();
+            switch (i2) {
+            case 1: i2 = 2; break;
+            case 2: i2 = 1; break;
+            }
+            std::pair<double, double> f1 = Static::two2euclide(i1); // исходный сдвинутый
+            std::pair<double, double> f2 = Static::two2euclide(i2); // дополненный статичный
+            rm[i].first += f1.first * f2.first - f1.second * f2.second; // Re
+            rm[i].second += f1.first * f2.second + f1.second * f2.first; // Im
+        }
+        rm[i].first = ((double) ((int) std::round((rm[i].first / n) * 1000))) / 1000;
+        rm[i].second = ((double) ((int) std::round((rm[i].second / n) * 1000))) / 1000;
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}

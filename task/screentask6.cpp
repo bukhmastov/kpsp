@@ -1,31 +1,28 @@
-#include "screentask5.h"
-#include "ui_screentask5.h"
+#include "screentask6.h"
+#include "ui_screentask6.h"
 
-ScreenTask5::ScreenTask5(QWidget *parent) : ScreenController(parent), ui(new Ui::ScreenTask5) {
+ScreenTask6::ScreenTask6(QWidget *parent) : ScreenController(parent), ui(new Ui::ScreenTask6) {
     ui->setupUi(this);
 }
 
-ScreenTask5::~ScreenTask5() {
+ScreenTask6::~ScreenTask6() {
     delete ui;
 }
 
-void ScreenTask5::init() {
-    QString f;
+void ScreenTask6::init() {
     QString mSeq;
-    int c0, c1;
-    do {
-        c0 = rnd() % 3;
-        c1 = rnd() % 3;
-    } while (c0 == 0 && c1 == 0);
-    switch(rnd() % 2) {
-    case 0:
-        f = "x<sup>2</sup>+x+2";
-        mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return 2 * c0 + c1; });
-        break;
-    case 1:
-        f = "x<sup>2</sup>+2x+2";
-        mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return c0 + c1; });
-        break;
+    if (ScreenController::store.count("task5_mSeq")) {
+        mSeq = ScreenController::store.at("task5_mSeq");
+    } else {
+        int c0, c1;
+        do {
+            c0 = rnd() % 3;
+            c1 = rnd() % 3;
+        } while (c0 == 0 && c1 == 0);
+        switch(rnd() % 2) {
+        case 0: mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return 2 * c0 + c1; }); break;
+        case 1: mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return c0 + c1; }); break;
+        }
     }
     for (int i = 0; i < 3; i++) {
         m.push_back(-1);
@@ -40,14 +37,11 @@ void ScreenTask5::init() {
         m[i++] = mI;
         next:;
     }
-    rmLI = Static::getLIPAKF(mSeq, 3, 8);
-    rmEV = Static::getEVPAKF(mSeq, 8);
-    ScreenController::store["task5_mSeq"] = mSeq;
+    rmLI = Static::getDLIPAKF(mSeq, 3, 8);
+    rmEV = Static::getDEVPAKF(mSeq, 8);
     // setup ui
     QString title = ui->title->text();
-    title = title.replace("%h%", f);
-    title = title.replace("%c0%", QString::number(c0));
-    title = title.replace("%c1%", QString::number(c1));
+    title = title.replace("%mSeq%", mSeq);
     title = title.replace("%m1%", QString::number(m.at(0)));
     title = title.replace("%m2%", QString::number(m.at(1)));
     title = title.replace("%m3%", QString::number(m.at(2)));
@@ -71,14 +65,14 @@ void ScreenTask5::init() {
     }
 }
 
-bool ScreenTask5::validate(Core* core, QString* message) {
+bool ScreenTask6::validate(Core* core, QString* message) {
     if (readOnly) {
         return true;
     }
     if (
-            ui->inputLIm1->text().toInt() == rmLI.at(m.at(0)) &&
-            ui->inputLIm2->text().toInt() == rmLI.at(m.at(1)) &&
-            ui->inputLIm3->text().toInt() == rmLI.at(m.at(2)) &&
+            ui->inputLIm1->text().toDouble() == rmLI.at(m.at(0)) &&
+            ui->inputLIm2->text().toDouble() == rmLI.at(m.at(1)) &&
+            ui->inputLIm3->text().toDouble() == rmLI.at(m.at(2)) &&
             ui->inputEVm1Re->text().toDouble() == rmEV.at(m.at(0)).first &&
             ui->inputEVm1Im->text().toDouble() == rmEV.at(m.at(0)).second &&
             ui->inputEVm2Re->text().toDouble() == rmEV.at(m.at(1)).first &&

@@ -1,20 +1,20 @@
-#ifndef SCREENTASK5_H
-#define SCREENTASK5_H
+#ifndef SCREENTASK6_H
+#define SCREENTASK6_H
 
 #include <QFrame>
 #include "util/core.h"
 #include "util/screencontroller.h"
 
 namespace Ui {
-    class ScreenTask5;
+    class ScreenTask6;
 }
 
-class ScreenTask5 : public ScreenController {
+class ScreenTask6 : public ScreenController {
     Q_OBJECT
 
 public:
-    explicit ScreenTask5(QWidget *parent = 0);
-    ~ScreenTask5();
+    explicit ScreenTask6(QWidget *parent = 0);
+    ~ScreenTask6();
     ScreenController* init(int, bool);
     bool validate(Core*, QString*);
 
@@ -22,10 +22,10 @@ protected:
     void init();
 
 private:
-    Ui::ScreenTask5 *ui;
+    Ui::ScreenTask6 *ui;
     std::vector<int> m;
-    std::vector<int> rmLI;
+    std::vector<double> rmLI;
     std::vector<std::pair<double, double>> rmEV;
 };
 
-#endif // SCREENTASK5_H
+#endif // SCREENTASK6_H
