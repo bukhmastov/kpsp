@@ -42,7 +42,8 @@ SOURCES += \
     view/chartview.cpp \
     task/screentask2.cpp \
     task/screentask3.cpp \
-    task/screentask4.cpp
+    task/screentask4.cpp \
+    task/screentask5.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -63,7 +64,8 @@ HEADERS += \
     view/chartview.h \
     task/screentask2.h \
     task/screentask3.h \
-    task/screentask4.h
+    task/screentask4.h \
+    task/screentask5.h
 
 FORMS += \
         mainwindow.ui \
@@ -75,7 +77,8 @@ FORMS += \
     task/screentask1.ui \
     task/screentask2.ui \
     task/screentask3.ui \
-    task/screentask4.ui
+    task/screentask4.ui \
+    task/screentask5.ui
 
 RESOURCES += \
     resources.qrc

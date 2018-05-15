@@ -21,6 +21,12 @@ public:
     static QString sequence01to11(QString);
     static QString getDyadicShift(QString, int);
     static std::vector<int> getDPAKF(QString, int);
+    static QString get3MSequence(int, int, int, int (*)(int, int));
+    static std::vector<int> getLIPAKF(QString, int, int);
+    static std::vector<std::pair<double, double>> getEVPAKF(QString, int);
+
+private:
+    static std::pair<double, double> two2euclide(int);
 };
 
 #endif // STATIC_H

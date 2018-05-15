@@ -8,7 +8,7 @@ int Static::score4task = 1;
 QString Static::messageAnswerRight = "Ответ верный (+2 балла)";
 QString Static::messageAnswerWrong = "Ответ неверный (-2 балла)";
 
-QString Static::getMSequence(/* polynom x^3+x+1 = 1011 */QString poly, int n) {
+QString Static::getMSequence(/* polynom 1+x+x^3 = 1011 */QString poly, int n) {
     QString args;
     for (int i = 0; i < poly.size() - 1; i++) {
         args.append("1");
@@ -179,4 +179,77 @@ std::vector<int> Static::getDPAKF(QString f, int n) {
     }
     rm[n] = rm.at(0);
     return rm;
+}
+
+QString Static::get3MSequence(int c0, int c1, int n, int (*get)(int, int)) {
+    QString mSeq;
+    int c2;
+    mSeq.append(QString::number(c0));
+    mSeq.append(QString::number(c1));
+    for (int i = 2; i < n; i++) {
+        c2 = get(c1, c0) % 3;
+        mSeq.append(QString::number(c2));
+        c0 = c1;
+        c1 = c2;
+    }
+    return mSeq;
+}
+
+std::vector<int> Static::getLIPAKF(QString f, int p, int n) {
+    std::vector<int> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(0);
+    }
+    for (int i = 0; i < n; i++) {
+        QString fs = ""; // сдвиг вправо на i знаков с заполнением левых символов
+        for (int j = n - i; j < 2 * n - i; j++) {
+            fs.append(f.at(j % n));
+        }
+        int d = 0;
+        for (int j = 0; j < n; j++) {
+            if (f.at(j) != fs.at(j)) {
+                d++;
+            }
+        }
+        rm[i] = (int) std::round((double) n - (double) ((4.0 / (double) p) * (double) d));
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}
+
+std::vector<std::pair<double, double>> Static::getEVPAKF(QString f, int n) {
+    std::vector<std::pair<double, double>> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(std::make_pair(0.0, 0.0));
+    }
+    for (int i = 0; i < n; i++) {
+        QString fs = ""; // сдвиг вправо на i знаков с заполнением левых символов
+        for (int j = n - i; j < 2 * n - i; j++) {
+            fs.append(f.at(j % n));
+        }
+        for (int j = 0; j < n; j++) {
+            int i1 = QString(fs.at(j)).toInt();
+            int i2 = QString(f.at(j)).toInt();
+            switch (i2) {
+            case 1: i2 = 2; break;
+            case 2: i2 = 1; break;
+            }
+            std::pair<double, double> f1 = Static::two2euclide(i1); // исходный сдвинутый
+            std::pair<double, double> f2 = Static::two2euclide(i2); // дополненный статичный
+            rm[i].first += f1.first * f2.first - f1.second * f2.second; // Re
+            rm[i].second += f1.first * f2.second + f1.second * f2.first; // Im
+        }
+        rm[i].first = ((double) ((int) std::round((rm[i].first / n) * 1000))) / 1000;
+        rm[i].second = ((double) ((int) std::round((rm[i].second / n) * 1000))) / 1000;
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}
+
+std::pair<double, double> Static::two2euclide(int i) {
+    switch (i % 3) {
+    case 0: return std::make_pair( 1.0,   0.0);
+    case 1: return std::make_pair(-0.5,   sqrt(3) / 2.0);
+    case 2: return std::make_pair(-0.5, - sqrt(3) / 2.0);
+    }
 }

@@ -47,7 +47,7 @@
         <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
-        <string>Определить ненормированную ПАКФ R(m) в пространстве Эвклида при диадном сдвиге для последовательности Уолша из предыдущего задания (%f%) для значений m от 0 до 8</string>
+        <string>Определить ненормированную ПАКФ R(m) в пространстве Эвклида при диадном сдвиге для последовательности Уолша из предыдущего задания (%f%) для значений m от 0 до 8. Результаты вычислений и графики требуется занести в отчёт.</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -84,8 +84,8 @@
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>0</width>
+             <height>0</height>
             </size>
            </property>
           </spacer>
@@ -395,8 +395,8 @@
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>0</width>
+             <height>0</height>
             </size>
            </property>
           </spacer>
@@ -430,8 +430,8 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
-           <height>20</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
         </spacer>
@@ -446,8 +446,8 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
-           <height>20</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
         </spacer>
