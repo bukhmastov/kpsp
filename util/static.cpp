@@ -318,3 +318,25 @@ std::vector<std::pair<double, double>> Static::getDEVPAKF(QString f, int n) {
     rm[n] = rm.at(0);
     return rm;
 }
+
+std::vector<int> Static::getPVKF(QString f1, QString f2, int n) {
+    std::vector<int> rm;
+    for (int i = 0; i < n + 1; i++) {
+        rm.push_back(0);
+    }
+    for (int i = 0; i < n; i++) {
+        QString f2s = ""; // сдвиг вправо на i знаков с заполнением левых символов
+        for (int j = n - i; j < 2 * n - i; j++) {
+            f2s.append(f2.at(j % n));
+        }
+        int q = 0;
+        for (int j = 0; j < n; j++) {
+            if (f1.at(j) == f2s.at(j)) {
+                q++;
+            }
+        }
+        rm[i] = 2 * q - n;
+    }
+    rm[n] = rm.at(0);
+    return rm;
+}

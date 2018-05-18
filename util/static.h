@@ -21,6 +21,7 @@ public:
     static std::vector<double> getDLIPAKF(QString, int, int);
     static std::vector<std::pair<double, double>> getEVPAKF(QString, int);
     static std::vector<std::pair<double, double>> getDEVPAKF(QString, int);
+    static std::vector<int> getPVKF(QString, QString, int);
 
     static QString alphabet01to11(QString);
     static QString alphabet11to01(QString);
