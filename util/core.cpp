@@ -15,6 +15,10 @@
 #include "task/screentask8a.h"
 #include "task/screentask8b.h"
 #include "task/screentask8c.h"
+#include "task/screentask9a.h"
+#include "task/screentask9b.h"
+#include "task/screentask10a.h"
+#include "task/screentask10b.h"
 #include <iostream>
 #include <chrono>
 #include <algorithm>
@@ -135,8 +139,11 @@ void Core::generate(unsigned int seed) {
     //tasks.push_back(new Task(20, 7,  "Б) Определение ПВКФ предпочтительной пары МП"));
     //tasks.push_back(new Task(21, 8,  "A) Определение ПВКФ последовательностей Голда"));
     //tasks.push_back(new Task(22, 8,  "Б) Определение ПВКФ последовательностей Голда"));
-    tasks.push_back(new Task(23, 8,  "В) Определение ПВКФ последовательностей Голда"));
-
+    //tasks.push_back(new Task(23, 8,  "В) Определение ПВКФ последовательностей Голда"));
+    //tasks.push_back(new Task(24, 9,  "А) Определение ПВКФ последовательностей малого множества Касами"));
+    //tasks.push_back(new Task(25, 9,  "Б) Определение ПВКФ последовательностей малого множества Касами"));
+    //tasks.push_back(new Task(26, 10,  "А) Определение ПВКФ последовательностей большого множества Касами"));
+    tasks.push_back(new Task(27, 10,  "Б) Определение ПВКФ последовательностей большого множества Касами"));
     // summary part
     tasks.push_back(new Task(99, 0, "Результат", false));
     // ------------------------------
@@ -178,7 +185,10 @@ ScreenController* Core::getView(int id) {
         case 21: return new ScreenTask8A;  break;
         case 22: return new ScreenTask8B;  break;
         case 23: return new ScreenTask8C;  break;
-
+        case 24: return new ScreenTask9A;  break;
+        case 25: return new ScreenTask9B;  break;
+        case 26: return new ScreenTask10A;  break;
+        case 27: return new ScreenTask10B;  break;
         // summary part
         case 99: return ScreenSummary::get(this); break;
         default: return NULL;

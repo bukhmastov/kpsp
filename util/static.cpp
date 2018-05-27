@@ -36,8 +36,9 @@ QString Static::getMSequence(/* polynom 1+x+x^3 = 1101 */QString poly, QString a
 
 QString Static::getXOR(QString p1, QString p2) {
     QString p12;
-    for (int i = 0; i < p1.size(); i++) {
-        p12.append(p1.at(i) == p2.at(i) ? "0" : "1");
+    int size = p1.size() > p2.size() ? p1.size() : p2.size();
+    for (int i = 0; i < size; i++) {
+        p12.append(p1.at(i % p1.size()) == p2.at(i % p2.size()) ? "0" : "1");
     }
     return p12;
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ScreenTask8C</class>
- <widget class="QFrame" name="ScreenTask8C">
+ <class>ScreenTask9B</class>
+ <widget class="QFrame" name="ScreenTask9B">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>675</width>
-    <height>466</height>
+    <width>664</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,7 +47,7 @@
         <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
-        <string>Б) По графику R12(m) определить значения уровней функции корреляции и число значений для каждого уровня</string>
+        <string>Б) По графику R12(m) определить значения уровней функции корреляции и число этих значений для каждого уровня</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -533,14 +533,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>inputR1</tabstop>
-  <tabstop>inputN1</tabstop>
-  <tabstop>inputR2</tabstop>
-  <tabstop>inputN2</tabstop>
-  <tabstop>inputR3</tabstop>
-  <tabstop>inputN3</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
