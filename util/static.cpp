@@ -46,7 +46,7 @@ QString Static::getXOR(QString p1, QString p2) {
 QString Static::getReadablePolynom(QString poly) {
     QString readable = "";
     int size = poly.size();
-    for (int i = size - 1; i >= 0; i--) {
+    for (int i = 0; i < size; i++) {
         if (poly.at(i) == QChar('1')) {
             if (!readable.isEmpty()) {
                 readable += "+";
