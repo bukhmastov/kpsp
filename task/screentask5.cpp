@@ -19,11 +19,11 @@ void ScreenTask5::init() {
     } while (c0 == 0 && c1 == 0);
     switch(rnd() % 2) {
     case 0:
-        f = "x<sup>2</sup>+x+2";
+        f = "2+x+x<sup>2</sup>";
         mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return 2 * c0 + c1; });
         break;
     case 1:
-        f = "x<sup>2</sup>+2x+2";
+        f = "2+2x+x<sup>2</sup>";
         mSeq = Static::get3MSequence(c0, c1, 8, [](int c0, int c1) -> int { return c0 + c1; });
         break;
     }
@@ -62,12 +62,9 @@ void ScreenTask5::init() {
         ui->inputLIm1->setText(QString::number(rmLI.at(m.at(0))));
         ui->inputLIm2->setText(QString::number(rmLI.at(m.at(1))));
         ui->inputLIm3->setText(QString::number(rmLI.at(m.at(2))));
-        ui->inputEVm1Re->setText(QString::number(rmEV.at(m.at(0)).first));
-        ui->inputEVm1Im->setText(QString::number(rmEV.at(m.at(0)).second));
-        ui->inputEVm2Re->setText(QString::number(rmEV.at(m.at(1)).first));
-        ui->inputEVm2Im->setText(QString::number(rmEV.at(m.at(1)).second));
-        ui->inputEVm3Re->setText(QString::number(rmEV.at(m.at(2)).first));
-        ui->inputEVm3Im->setText(QString::number(rmEV.at(m.at(2)).second));
+        ui->inputEVm1->setText(QString::number(rmEV.at(m.at(0)).first));
+        ui->inputEVm2->setText(QString::number(rmEV.at(m.at(1)).first));
+        ui->inputEVm3->setText(QString::number(rmEV.at(m.at(2)).first));
     }
 }
 
@@ -79,12 +76,9 @@ bool ScreenTask5::validate(Core* core, QString* message) {
             ui->inputLIm1->text().toInt() == rmLI.at(m.at(0)) &&
             ui->inputLIm2->text().toInt() == rmLI.at(m.at(1)) &&
             ui->inputLIm3->text().toInt() == rmLI.at(m.at(2)) &&
-            ui->inputEVm1Re->text().toDouble() == rmEV.at(m.at(0)).first &&
-            ui->inputEVm1Im->text().toDouble() == rmEV.at(m.at(0)).second &&
-            ui->inputEVm2Re->text().toDouble() == rmEV.at(m.at(1)).first &&
-            ui->inputEVm2Im->text().toDouble() == rmEV.at(m.at(1)).second &&
-            ui->inputEVm3Re->text().toDouble() == rmEV.at(m.at(2)).first &&
-            ui->inputEVm3Im->text().toDouble() == rmEV.at(m.at(2)).second
+            ui->inputEVm1->text().toDouble() == rmEV.at(m.at(0)).first &&
+            ui->inputEVm2->text().toDouble() == rmEV.at(m.at(1)).first &&
+            ui->inputEVm3->text().toDouble() == rmEV.at(m.at(2)).first
     ) {
         message->append(Static::messageAnswerRight);
         core->changeScore(2);

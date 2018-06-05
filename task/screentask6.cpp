@@ -56,12 +56,9 @@ void ScreenTask6::init() {
         ui->inputLIm1->setText(QString::number(rmLI.at(m.at(0))));
         ui->inputLIm2->setText(QString::number(rmLI.at(m.at(1))));
         ui->inputLIm3->setText(QString::number(rmLI.at(m.at(2))));
-        ui->inputEVm1Re->setText(QString::number(rmEV.at(m.at(0)).first));
-        ui->inputEVm1Im->setText(QString::number(rmEV.at(m.at(0)).second));
-        ui->inputEVm2Re->setText(QString::number(rmEV.at(m.at(1)).first));
-        ui->inputEVm2Im->setText(QString::number(rmEV.at(m.at(1)).second));
-        ui->inputEVm3Re->setText(QString::number(rmEV.at(m.at(2)).first));
-        ui->inputEVm3Im->setText(QString::number(rmEV.at(m.at(2)).second));
+        ui->inputEVm1->setText(QString::number(rmEV.at(m.at(0)).first));
+        ui->inputEVm2->setText(QString::number(rmEV.at(m.at(1)).first));
+        ui->inputEVm3->setText(QString::number(rmEV.at(m.at(2)).first));
     }
 }
 
@@ -73,12 +70,9 @@ bool ScreenTask6::validate(Core* core, QString* message) {
             ui->inputLIm1->text().toDouble() == rmLI.at(m.at(0)) &&
             ui->inputLIm2->text().toDouble() == rmLI.at(m.at(1)) &&
             ui->inputLIm3->text().toDouble() == rmLI.at(m.at(2)) &&
-            ui->inputEVm1Re->text().toDouble() == rmEV.at(m.at(0)).first &&
-            ui->inputEVm1Im->text().toDouble() == rmEV.at(m.at(0)).second &&
-            ui->inputEVm2Re->text().toDouble() == rmEV.at(m.at(1)).first &&
-            ui->inputEVm2Im->text().toDouble() == rmEV.at(m.at(1)).second &&
-            ui->inputEVm3Re->text().toDouble() == rmEV.at(m.at(2)).first &&
-            ui->inputEVm3Im->text().toDouble() == rmEV.at(m.at(2)).second
+            ui->inputEVm1->text().toDouble() == rmEV.at(m.at(0)).first &&
+            ui->inputEVm2->text().toDouble() == rmEV.at(m.at(1)).first &&
+            ui->inputEVm3->text().toDouble() == rmEV.at(m.at(2)).first
     ) {
         message->append(Static::messageAnswerRight);
         core->changeScore(2);
