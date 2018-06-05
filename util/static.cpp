@@ -313,8 +313,8 @@ std::vector<std::pair<double, double>> Static::getDEVPAKF(QString f, int n) {
             rm[i].first += f1.first * f2.first - f1.second * f2.second; // Re
             rm[i].second += f1.first * f2.second + f1.second * f2.first; // Im
         }
-        rm[i].first = ((double) ((int) std::round((rm[i].first / n) * 1000))) / 1000;
-        rm[i].second = ((double) ((int) std::round((rm[i].second / n) * 1000))) / 1000;
+        rm[i].first = ((double) ((int) std::round(rm[i].first * 1000))) / 1000;
+        rm[i].second = ((double) ((int) std::round(rm[i].second * 1000))) / 1000;
     }
     rm[n] = rm.at(0);
     return rm;
