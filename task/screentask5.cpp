@@ -65,12 +65,12 @@ void ScreenTask5::init() {
         ui->inputEVm1->setText(QString::number(rmEV.at(m.at(0)).first));
         ui->inputEVm2->setText(QString::number(rmEV.at(m.at(1)).first));
         ui->inputEVm3->setText(QString::number(rmEV.at(m.at(2)).first));
-        ui->inputLIm1->setEnabled(false);
-        ui->inputLIm2->setEnabled(false);
-        ui->inputLIm3->setEnabled(false);
-        ui->inputEVm1->setEnabled(false);
-        ui->inputEVm2->setEnabled(false);
-        ui->inputEVm3->setEnabled(false);
+        ui->inputLIm1->setReadOnly(true);
+        ui->inputLIm2->setReadOnly(true);
+        ui->inputLIm3->setReadOnly(true);
+        ui->inputEVm1->setReadOnly(true);
+        ui->inputEVm2->setReadOnly(true);
+        ui->inputEVm3->setReadOnly(true);
     }
 }
 

@@ -48,14 +48,14 @@ void ScreenTask3::init() {
         ui->inputF6->setText(Static::alphabet01to11(f.at(5)));
         ui->inputF7->setText(Static::alphabet01to11(f.at(6)));
         ui->inputF8->setText(Static::alphabet01to11(f.at(7)));
-        ui->inputF1->setEnabled(false);
-        ui->inputF2->setEnabled(false);
-        ui->inputF3->setEnabled(false);
-        ui->inputF4->setEnabled(false);
-        ui->inputF5->setEnabled(false);
-        ui->inputF6->setEnabled(false);
-        ui->inputF7->setEnabled(false);
-        ui->inputF8->setEnabled(false);
+        ui->inputF1->setReadOnly(true);
+        ui->inputF2->setReadOnly(true);
+        ui->inputF3->setReadOnly(true);
+        ui->inputF4->setReadOnly(true);
+        ui->inputF5->setReadOnly(true);
+        ui->inputF6->setReadOnly(true);
+        ui->inputF7->setReadOnly(true);
+        ui->inputF8->setReadOnly(true);
 
         ui->input11->setText(QString::number(rm1.at(0)));
         ui->input12->setText(QString::number(rm1.at(1)));
@@ -72,15 +72,15 @@ void ScreenTask3::init() {
         }
         chartRM1->draw();
         ui->charts->addWidget(chartRM1);
-        ui->input11->setEnabled(false);
-        ui->input12->setEnabled(false);
-        ui->input13->setEnabled(false);
-        ui->input14->setEnabled(false);
-        ui->input15->setEnabled(false);
-        ui->input16->setEnabled(false);
-        ui->input17->setEnabled(false);
-        ui->input18->setEnabled(false);
-        ui->input19->setEnabled(false);
+        ui->input11->setReadOnly(true);
+        ui->input12->setReadOnly(true);
+        ui->input13->setReadOnly(true);
+        ui->input14->setReadOnly(true);
+        ui->input15->setReadOnly(true);
+        ui->input16->setReadOnly(true);
+        ui->input17->setReadOnly(true);
+        ui->input18->setReadOnly(true);
+        ui->input19->setReadOnly(true);
 
         ui->input21->setText(QString::number(rm2.at(0)));
         ui->input22->setText(QString::number(rm2.at(1)));
@@ -97,15 +97,15 @@ void ScreenTask3::init() {
         }
         chartRM2->draw();
         ui->charts->addWidget(chartRM2);
-        ui->input21->setEnabled(false);
-        ui->input22->setEnabled(false);
-        ui->input23->setEnabled(false);
-        ui->input24->setEnabled(false);
-        ui->input25->setEnabled(false);
-        ui->input26->setEnabled(false);
-        ui->input27->setEnabled(false);
-        ui->input28->setEnabled(false);
-        ui->input29->setEnabled(false);
+        ui->input21->setReadOnly(true);
+        ui->input22->setReadOnly(true);
+        ui->input23->setReadOnly(true);
+        ui->input24->setReadOnly(true);
+        ui->input25->setReadOnly(true);
+        ui->input26->setReadOnly(true);
+        ui->input27->setReadOnly(true);
+        ui->input28->setReadOnly(true);
+        ui->input29->setReadOnly(true);
     }
 }
 

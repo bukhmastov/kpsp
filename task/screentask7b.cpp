@@ -57,12 +57,12 @@ void ScreenTask7B::init() {
                 break;
             }
         }
-        ui->inputR1->setEnabled(false);
-        ui->inputN1->setEnabled(false);
-        ui->inputR2->setEnabled(false);
-        ui->inputN2->setEnabled(false);
-        ui->inputR3->setEnabled(false);
-        ui->inputN3->setEnabled(false);
+        ui->inputR1->setReadOnly(true);
+        ui->inputN1->setReadOnly(true);
+        ui->inputR2->setReadOnly(true);
+        ui->inputN2->setReadOnly(true);
+        ui->inputR3->setReadOnly(true);
+        ui->inputN3->setReadOnly(true);
     }
 }
 

@@ -28,11 +28,11 @@ void ScreenTask10A::init() {
             case 4: ui->inputR5->setText(el); break;
             }
         }
-        ui->inputR1->setEnabled(false);
-        ui->inputR2->setEnabled(false);
-        ui->inputR3->setEnabled(false);
-        ui->inputR4->setEnabled(false);
-        ui->inputR5->setEnabled(false);
+        ui->inputR1->setReadOnly(true);
+        ui->inputR2->setReadOnly(true);
+        ui->inputR3->setReadOnly(true);
+        ui->inputR4->setReadOnly(true);
+        ui->inputR5->setReadOnly(true);
     }
 }
 

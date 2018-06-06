@@ -39,14 +39,14 @@ void ScreenTask1::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
-        ui->input11->setEnabled(false);
-        ui->input12->setEnabled(false);
-        ui->input13->setEnabled(false);
-        ui->input14->setEnabled(false);
-        ui->input15->setEnabled(false);
-        ui->input16->setEnabled(false);
-        ui->input17->setEnabled(false);
-        ui->input18->setEnabled(false);
+        ui->input11->setReadOnly(true);
+        ui->input12->setReadOnly(true);
+        ui->input13->setReadOnly(true);
+        ui->input14->setReadOnly(true);
+        ui->input15->setReadOnly(true);
+        ui->input16->setReadOnly(true);
+        ui->input17->setReadOnly(true);
+        ui->input18->setReadOnly(true);
     }
     // последовательность Баркера
     f = "1110010";
@@ -67,14 +67,14 @@ void ScreenTask1::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
-        ui->input21->setEnabled(false);
-        ui->input22->setEnabled(false);
-        ui->input23->setEnabled(false);
-        ui->input24->setEnabled(false);
-        ui->input25->setEnabled(false);
-        ui->input26->setEnabled(false);
-        ui->input27->setEnabled(false);
-        ui->input28->setEnabled(false);
+        ui->input21->setReadOnly(true);
+        ui->input22->setReadOnly(true);
+        ui->input23->setReadOnly(true);
+        ui->input24->setReadOnly(true);
+        ui->input25->setReadOnly(true);
+        ui->input26->setReadOnly(true);
+        ui->input27->setReadOnly(true);
+        ui->input28->setReadOnly(true);
     }
     // произвольная последовательность
     switch (rnd() % 4) {
@@ -100,14 +100,14 @@ void ScreenTask1::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
-        ui->input31->setEnabled(false);
-        ui->input32->setEnabled(false);
-        ui->input33->setEnabled(false);
-        ui->input34->setEnabled(false);
-        ui->input35->setEnabled(false);
-        ui->input36->setEnabled(false);
-        ui->input37->setEnabled(false);
-        ui->input38->setEnabled(false);
+        ui->input31->setReadOnly(true);
+        ui->input32->setReadOnly(true);
+        ui->input33->setReadOnly(true);
+        ui->input34->setReadOnly(true);
+        ui->input35->setReadOnly(true);
+        ui->input36->setReadOnly(true);
+        ui->input37->setReadOnly(true);
+        ui->input38->setReadOnly(true);
     }
 }
 

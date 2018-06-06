@@ -27,9 +27,9 @@ void ScreenTask9A::init() {
             case 2: ui->inputR3->setText(el); break;
             }
         }
-        ui->inputR1->setEnabled(false);
-        ui->inputR2->setEnabled(false);
-        ui->inputR3->setEnabled(false);
+        ui->inputR1->setReadOnly(true);
+        ui->inputR2->setReadOnly(true);
+        ui->inputR3->setReadOnly(true);
     }
 }
 
