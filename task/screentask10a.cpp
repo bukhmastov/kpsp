@@ -28,6 +28,11 @@ void ScreenTask10A::init() {
             case 4: ui->inputR5->setText(el); break;
             }
         }
+        ui->inputR1->setEnabled(false);
+        ui->inputR2->setEnabled(false);
+        ui->inputR3->setEnabled(false);
+        ui->inputR4->setEnabled(false);
+        ui->inputR5->setEnabled(false);
     }
 }
 

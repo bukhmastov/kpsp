@@ -41,6 +41,8 @@ void ScreenTask8A::init() {
     if (readOnly) {
         ui->inputFG1->setText(fg1);
         ui->inputFG2->setText(fg2);
+        ui->inputFG1->setEnabled(false);
+        ui->inputFG2->setEnabled(false);
     }
 }
 

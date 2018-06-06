@@ -39,6 +39,14 @@ void ScreenTask2::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
+        ui->input11->setEnabled(false);
+        ui->input12->setEnabled(false);
+        ui->input13->setEnabled(false);
+        ui->input14->setEnabled(false);
+        ui->input15->setEnabled(false);
+        ui->input16->setEnabled(false);
+        ui->input17->setEnabled(false);
+        ui->input18->setEnabled(false);
     }
     // последовательность Баркера
     f = "1110010";
@@ -59,6 +67,14 @@ void ScreenTask2::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
+        ui->input21->setEnabled(false);
+        ui->input22->setEnabled(false);
+        ui->input23->setEnabled(false);
+        ui->input24->setEnabled(false);
+        ui->input25->setEnabled(false);
+        ui->input26->setEnabled(false);
+        ui->input27->setEnabled(false);
+        ui->input28->setEnabled(false);
     }
     // произвольная последовательность
     switch (rnd() % 4) {
@@ -84,6 +100,14 @@ void ScreenTask2::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
+        ui->input31->setEnabled(false);
+        ui->input32->setEnabled(false);
+        ui->input33->setEnabled(false);
+        ui->input34->setEnabled(false);
+        ui->input35->setEnabled(false);
+        ui->input36->setEnabled(false);
+        ui->input37->setEnabled(false);
+        ui->input38->setEnabled(false);
     }
 }
 

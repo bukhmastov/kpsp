@@ -72,6 +72,16 @@ void ScreenTask10B::init() {
                 break;
             }
         }
+        ui->inputR1->setEnabled(false);
+        ui->inputN1->setEnabled(false);
+        ui->inputR2->setEnabled(false);
+        ui->inputN2->setEnabled(false);
+        ui->inputR3->setEnabled(false);
+        ui->inputN3->setEnabled(false);
+        ui->inputR4->setEnabled(false);
+        ui->inputN4->setEnabled(false);
+        ui->inputR5->setEnabled(false);
+        ui->inputN5->setEnabled(false);
     }
 }
 

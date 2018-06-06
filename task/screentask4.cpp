@@ -45,6 +45,15 @@ void ScreenTask4::init() {
         }
         chartRM->draw();
         ui->charts->addWidget(chartRM);
+        ui->input1->setEnabled(false);
+        ui->input2->setEnabled(false);
+        ui->input3->setEnabled(false);
+        ui->input4->setEnabled(false);
+        ui->input5->setEnabled(false);
+        ui->input6->setEnabled(false);
+        ui->input7->setEnabled(false);
+        ui->input8->setEnabled(false);
+        ui->input9->setEnabled(false);
     }
 }
 

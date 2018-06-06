@@ -59,6 +59,10 @@ void ScreenTask7A::init() {
         ui->inputm2->setText(QString::number(rm12.at(m.at(1))));
         ui->inputm3->setText(QString::number(rm12.at(m.at(2))));
         ui->inputm4->setText(QString::number(rm12.at(m.at(3))));
+        ui->inputm1->setEnabled(false);
+        ui->inputm2->setEnabled(false);
+        ui->inputm3->setEnabled(false);
+        ui->inputm4->setEnabled(false);
     }
 }
 

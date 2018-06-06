@@ -59,6 +59,12 @@ void ScreenTask6::init() {
         ui->inputEVm1->setText(QString::number(rmEV.at(m.at(0)).first));
         ui->inputEVm2->setText(QString::number(rmEV.at(m.at(1)).first));
         ui->inputEVm3->setText(QString::number(rmEV.at(m.at(2)).first));
+        ui->inputLIm1->setEnabled(false);
+        ui->inputLIm2->setEnabled(false);
+        ui->inputLIm3->setEnabled(false);
+        ui->inputEVm1->setEnabled(false);
+        ui->inputEVm2->setEnabled(false);
+        ui->inputEVm3->setEnabled(false);
     }
 }
 

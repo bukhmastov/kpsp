@@ -70,6 +70,8 @@ void ScreenTask8B::init() {
         }
         chart->draw();
         ui->charts->addWidget(chart);
+        ui->inputR12m1->setEnabled(false);
+        ui->inputR12m2->setEnabled(false);
     }
 }
 
