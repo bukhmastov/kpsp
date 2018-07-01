@@ -142,7 +142,7 @@
           <widget class="QLineEdit" name="inputFG1">
            <property name="minimumSize">
             <size>
-             <width>300</width>
+             <width>400</width>
              <height>0</height>
             </size>
            </property>
@@ -198,7 +198,7 @@
           <widget class="QLineEdit" name="inputFG2">
            <property name="minimumSize">
             <size>
-             <width>300</width>
+             <width>400</width>
              <height>0</height>
             </size>
            </property>

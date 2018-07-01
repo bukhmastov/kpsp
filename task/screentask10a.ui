@@ -114,13 +114,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
@@ -188,13 +188,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
@@ -262,13 +262,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
@@ -336,13 +336,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
@@ -410,13 +410,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>30</width>
+           <width>70</width>
            <height>30</height>
           </size>
          </property>
