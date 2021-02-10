@@ -47,7 +47,7 @@
      <item alignment="Qt::AlignVCenter">
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Цель работы</string>
@@ -63,7 +63,7 @@
      <item alignment="Qt::AlignVCenter">
       <widget class="QLabel" name="label_2">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Закрепить теоретические знания по анализу корреляционных свойств псевдослучайных последовательностей (ПСП)
@@ -80,7 +80,7 @@
      <item alignment="Qt::AlignVCenter">
       <widget class="QLabel" name="label_3">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Программа работы</string>
@@ -96,7 +96,7 @@
      <item alignment="Qt::AlignVCenter">
       <widget class="QLabel" name="label_4">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Проведение входного контрольного опроса

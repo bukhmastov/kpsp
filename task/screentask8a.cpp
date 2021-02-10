@@ -31,8 +31,8 @@ void ScreenTask8A::init() {
     for (int j = f1.size() - 1; j < 2 * f1.size() - 1; j++) {
         f1s.append(f1.at(j % f1.size()));
     }
-    fg1 = Static::getXOR(f1, f2);
-    fg2 = Static::getXOR(f1s, f2);
+    fg1 = Static::getXOR(f1, f2).left(10);
+    fg2 = Static::getXOR(f1s, f2).left(10);
     // setup ui
     QString title = ui->title->text();
     title = title.replace("%f1%", f1);
@@ -51,8 +51,8 @@ bool ScreenTask8A::validate(Core* core, QString* message) {
         return true;
     }
     if (
-            fg1.left(10) == ui->inputFG1->text().left(10) &&
-            fg2.left(10) == ui->inputFG2->text().left(10)
+            fg1 == ui->inputFG1->text() &&
+            fg2 == ui->inputFG2->text()
     ) {
         message->append(Static::messageAnswerRight);
         core->changeScore(2);

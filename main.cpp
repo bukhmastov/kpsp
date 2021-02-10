@@ -8,11 +8,12 @@
  *
  * Вопросы и задания определены в классе Core (/util/core.cpp)
  * Реализация заданий находится в папке /task (ex: /task/screentask1.cpp .h .ui)
+ * Тип работы задается в /util/static.cpp (worktype)
  *
  *
- * Бухмастов Алексей, Сколдинов Олег
+ * Бухмастов Алексей, Сколдинов Олег, Дзюба Анастасия
  * Университет ИТМО
- * 2018 год
+ * 2018 год, доработка 2019 год
  */
 
 int main(int argc, char *argv[]) {
@@ -20,7 +21,7 @@ int main(int argc, char *argv[]) {
     MainWindow window;
     try {
         if (argc > 1) {
-            int seed = atoi(argv[1]);
+            unsigned int seed = (unsigned int) atol(argv[1]);
             if (seed > 0) {
                 window.setSeed(seed);
             }

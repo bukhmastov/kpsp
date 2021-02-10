@@ -109,12 +109,13 @@ void Core::generate(unsigned int seed) {
     // ------------------------------
     // HERE GOES DEFINITIONS OF TASKS
     // EVERY TASK SHOULD BE ADDED TO TASKS VECTOR BELOW
+    // EVERY TASK SHOULD HAVE ITS OWN TASK BUTTON AT MainWindow.ui/h/cpp
     // TASK'S VIEWS DEFINES AT Core::getView(int id)
     // ------------------------------
     // intro part
-    tasks.push_back(new Task(0,  0,  "Практическое занятие"));
-    tasks.push_back(new Task(1,  0,  "Практическое занятие"));
-    tasks.push_back(new Task(2,  0,  "Практическое занятие"));
+    tasks.push_back(new Task(0,  0,  Static::worktype));
+    tasks.push_back(new Task(1,  0,  Static::worktype));
+    tasks.push_back(new Task(2,  0,  Static::worktype));
     // questions part
     tasks.push_back(new Task(3,  1,  "Входной контрольный опрос: вопрос 1",  false));
     tasks.push_back(new Task(4,  2,  "Входной контрольный опрос: вопрос 2",  false));
@@ -145,7 +146,6 @@ void Core::generate(unsigned int seed) {
     // summary part
     tasks.push_back(new Task(99, 0, "Результат", false));
     // ------------------------------
-    window->setMaxProgress(tasks.size());
     window->setNextEnabled(true);
     window->setResetEnabled(true);
 }
@@ -218,6 +218,11 @@ void Core::back() {
     }
 }
 
+void Core::back(int task) {
+    showedTask = task + 1;
+    show("");
+}
+
 void Core::reset() {
     generate();
     next();
@@ -237,12 +242,11 @@ void Core::show(QString message) {
     }
     Task *task = tasks.at(showedTask - 1);
     window->setStep(task->getNumber(), task->getTitle());
-    window->setProgress(showedTask);
+    window->setCurrentTask(showedTask - 1, currentTask - 1);
     window->setScore(score);
     window->setMessage(message);
     window->setWidget(getView(task->getId())->init(task->getId(), currentTask != showedTask));
-    window->setNextEnabled(currentTask == showedTask ? task->getNextButtonActive() : true);
-    window->setBackEnabled(showedTask > 1);
+    window->setNextEnabled(currentTask == showedTask ? task->getNextButtonActive() : false);
 }
 
 unsigned int Core::getSeed() {

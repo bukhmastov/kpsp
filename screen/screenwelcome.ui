@@ -45,7 +45,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="header">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
          <horstretch>0</horstretch>
@@ -53,7 +53,7 @@
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Практическое занятие</string>
@@ -75,7 +75,7 @@
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>&quot;Исследование корреляционных свойств псевдослучайных последовательностей&quot;</string>

@@ -20,6 +20,7 @@ void ScreenQuestion::init() {
         if (readOnly && index == 0) {
             QFont font = label->font();
             font.setBold(true);
+            font.setUnderline(true);
             label->setFont(font);
         }
         ui->answersLayout->addWidget(label);

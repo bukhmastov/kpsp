@@ -15,6 +15,7 @@ public:
     void generate(unsigned int);
     void next();
     void next(bool);
+    void back(int);
     void back();
     void reset();
     void changeScore(int);

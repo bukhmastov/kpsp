@@ -44,7 +44,7 @@
      <item>
       <widget class="QLabel" name="title">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Б) Вычислить ПВКФ R12(m) для m=%m1%, m=%m2%&lt;br&gt;FG1=%fg1%&lt;br&gt;FG2=%fg2%</string>
@@ -91,7 +91,7 @@
        <item row="0" column="1">
         <widget class="QLabel" name="labelR12m1">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R12(%m1%) =</string>
@@ -107,7 +107,7 @@
        <item row="0" column="4">
         <widget class="QLabel" name="labelR12m2">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R12(%m2%) =</string>
@@ -141,7 +141,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -198,7 +198,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

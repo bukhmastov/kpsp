@@ -9,7 +9,9 @@ ScreenWelcome::~ScreenWelcome() {
     delete ui;
 }
 
-void ScreenWelcome::init() {}
+void ScreenWelcome::init() {
+    ui->header->setText(Static::worktype);
+}
 
 bool ScreenWelcome::validate(Core*, QString*) {
     return true;

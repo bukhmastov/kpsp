@@ -44,7 +44,7 @@
      <item>
       <widget class="QLabel" name="title">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>В пространстве Эвклида определить ненормированную ПАКФ R1(m) и ААКФ R2(m) при циклическом сдвиге для значений m от 0 до 8 для последовательности Уолша F с периодом N = 8, соответствующей %k% строке (начиная с нулевой) матрицы Адамара порядка n = 3. Результаты вычислений и графики внести в отчет. </string>
@@ -93,7 +93,7 @@
          <item>
           <widget class="QLabel" name="label_7">
            <property name="styleSheet">
-            <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+            <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="text">
             <string>F =</string>
@@ -128,8 +128,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -158,8 +165,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -188,8 +202,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -218,8 +239,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -248,8 +276,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -278,8 +313,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -308,8 +350,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -338,8 +387,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -399,7 +455,7 @@
          <item>
           <widget class="QLabel" name="label_3">
            <property name="styleSheet">
-            <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+            <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="text">
             <string>R1(m) =</string>
@@ -433,7 +489,7 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -462,8 +518,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -492,8 +555,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -522,8 +592,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -552,8 +629,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -582,8 +666,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -612,8 +703,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -643,14 +741,14 @@
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
-             <pointsize>12</pointsize>
+             <pointsize>16</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -680,14 +778,14 @@
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
-             <pointsize>12</pointsize>
+             <pointsize>16</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -731,7 +829,7 @@
          <item>
           <widget class="QLabel" name="label_4">
            <property name="styleSheet">
-            <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+            <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="text">
             <string>R2(m) =</string>
@@ -766,8 +864,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -796,8 +901,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -826,8 +938,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -856,8 +975,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -886,8 +1012,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -916,8 +1049,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -946,8 +1086,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -976,8 +1123,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -1006,8 +1160,15 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>12</pointsize>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>

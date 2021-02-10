@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>864</width>
-    <height>516</height>
+    <width>940</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,7 +44,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Указания по выполнению работы</string>
@@ -60,7 +60,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Перед началом работы Вам присваиваются 50 баллов</string>
@@ -76,7 +76,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Входной контроль состоит из 10 вопросов, на каждый из которых предлагается по 5 вариантов ответа. Правильный ответ добавляет 2 балла, неправильный - отнимает. </string>
@@ -92,7 +92,7 @@
      <item>
       <widget class="QLabel" name="label_4">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Набор задач состоит из 15 заданий и подзаданий. Каждое задание/подзадание добавляет или отнимает 2 балла.</string>
@@ -108,7 +108,7 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Итоговая оценка по лабораторной работе зависит от количества баллов:
@@ -144,7 +144,7 @@
      <item>
       <widget class="QLabel" name="label_6">
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>&lt;b&gt;ВНИМАНИЕ&lt;/b&gt;&lt;br&gt;1. Ввод полиномов производится в двоичной форме по &lt;b&gt;возрастанию степени&lt;/b&gt;.&lt;br&gt;Например: h(x)=1+x&lt;sup&gt;4&lt;/sup&gt;+x&lt;sup&gt;6&lt;/sup&gt; будет выглядеть как h=1000101&lt;br&gt;2. Используемые сокращения:&lt;br&gt;ПАКФ, ПВКФ – периодическая авто (взаимно) корреляционная функция;&lt;br&gt;

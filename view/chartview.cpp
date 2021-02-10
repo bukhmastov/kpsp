@@ -60,7 +60,7 @@ void ChartView::draw() {
         scene->addLine(minX, i, maxX, i, i == 0 ? *axes : *grid);
     }
     // draw graph
-    for (int i = 1; i < points.size(); i++) {
+    for (unsigned int i = 1; i < points.size(); i++) {
         scene->addLine(QLineF(points.at(i - 1), points.at(i)), *graph);
     }
 

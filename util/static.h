@@ -5,6 +5,8 @@
 
 class Static {
 public:
+    static QString worktype; // "Лабораторная работа" "Практическое занятие"
+    static QString worktypeShort; // "ЛР" "ПЗ"
     static int scoreInitial;
     static int score4quetion;
     static int score4task;

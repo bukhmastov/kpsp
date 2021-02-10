@@ -19,11 +19,8 @@
    </property>
    <item row="5" column="0">
     <widget class="QLabel" name="seed">
-     <property name="toolTip">
-      <string>Аргумент для запуска</string>
-     </property>
      <property name="styleSheet">
-      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="text">
       <string>Уникальный вариант номер %seed%</string>
@@ -94,7 +91,7 @@ background-color: rgb(235, 235, 235);</string>
           <item>
            <widget class="QLabel" name="label_4">
             <property name="styleSheet">
-             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+             <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
 border: none;
 background-color: transparent;</string>
             </property>
@@ -112,7 +109,7 @@ background-color: transparent;</string>
           <item>
            <widget class="QLabel" name="score">
             <property name="styleSheet">
-             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+             <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
 border: none;
 background-color: transparent;</string>
             </property>
@@ -191,7 +188,7 @@ background-color: rgb(235, 235, 235);</string>
           <item>
            <widget class="QLabel" name="label_3">
             <property name="styleSheet">
-             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+             <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
 border: none;
 background-color: transparent;</string>
             </property>
@@ -209,7 +206,7 @@ background-color: transparent;</string>
           <item>
            <widget class="QLabel" name="mark">
             <property name="styleSheet">
-             <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+             <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
 border: none;
 background-color: transparent;</string>
             </property>
@@ -282,7 +279,7 @@ background-color: transparent;</string>
    <item row="3" column="0">
     <widget class="QLabel" name="date">
      <property name="styleSheet">
-      <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
+      <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="text">
       <string>Выполнено %date%</string>
@@ -313,7 +310,7 @@ background-color: transparent;</string>
      <item>
       <widget class="QLabel" name="label">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Результат прохождения заданий</string>

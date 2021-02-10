@@ -2,6 +2,9 @@
 #include <QString>
 #include <QChar>
 
+QString Static::worktype = "Лабораторная работа"; // "Лабораторная работа" "Практическое занятие"
+QString Static::worktypeShort = "ЛР"; // "ЛР" "ПЗ"
+
 int Static::scoreInitial = 50;
 int Static::score4quetion = 2;
 int Static::score4task = 1;
@@ -252,6 +255,7 @@ std::pair<double, double> Static::two2euclide(int i) {
     case 0: return std::make_pair( 1.0,   0.0);
     case 1: return std::make_pair(-0.5,   sqrt(3) / 2.0);
     case 2: return std::make_pair(-0.5, - sqrt(3) / 2.0);
+    default: throw std::runtime_error("Unreachable");
     }
 }
 

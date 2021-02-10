@@ -44,7 +44,7 @@
      <item>
       <widget class="QLabel" name="title">
        <property name="styleSheet">
-        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>Определить ненормированную ПАКФ при диадном сдвиге в пространствах Ли (алфавит {a0=0, a1=1, a2=2}) и Эвклида (алфавит {a0=1, a1=exp(j*2pi/3), a2=exp(j*4pi/3)}) для троичной М-последовательности из предыдущего пункта (%mSeq%) для сдвигов m={%m1%, %m2%, %m3%}. Результаты вычислений занести в отчёт.</string>
@@ -78,7 +78,7 @@
        <item row="0" column="1">
         <widget class="QLabel" name="label_7">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>Пространство Ли</string>
@@ -94,7 +94,7 @@
        <item row="0" column="3">
         <widget class="QLabel" name="labelLIm1">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m1%)</string>
@@ -136,7 +136,7 @@
        <item row="0" column="5">
         <widget class="QLabel" name="labelLIm3">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m3%)</string>
@@ -184,7 +184,7 @@
        <item row="0" column="4">
         <widget class="QLabel" name="labelLIm2">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m2%)</string>
@@ -260,7 +260,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -317,7 +317,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -345,7 +345,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -435,7 +435,7 @@
        <item row="3" column="3">
         <widget class="QLabel" name="labelEVm1">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m1%)</string>
@@ -496,7 +496,7 @@
        <item row="3" column="1">
         <widget class="QLabel" name="label_9">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>Пространство Эвклида</string>
@@ -556,7 +556,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -582,7 +582,7 @@
        <item row="3" column="4">
         <widget class="QLabel" name="labelEVm2">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m2%)</string>
@@ -598,7 +598,7 @@
        <item row="3" column="5">
         <widget class="QLabel" name="labelEVm3">
          <property name="styleSheet">
-          <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="text">
           <string>R(%m3%)</string>
@@ -646,8 +646,15 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>16</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string>font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -676,8 +683,15 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <family>MS Shell Dlg 2</family>
+           <pointsize>16</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string>font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -689,7 +703,7 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="styleSheet">
-        <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
         <string>(дробные числа округлять до тысячных)</string>
